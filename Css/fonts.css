@@ -1,0 +1,61 @@
+/*PT Sans */
+@font-face {
+    font-family: 'PT Sans';
+    src: url("../fonts/PT_Sans/PTSans-Regular.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/PT_Sans/PTSans-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../fonts/PT_Sans/PTSans-Regular.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/PT_Sans/PTSans-Regular.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/PT_Sans/PTSans-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("../fonts/PT_Sans/PTSans-Regular.svg#PTSans-Regular") format("svg"); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*Playfair Display*/
+@font-face {
+font-family: 'Playfair Display';
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/Playfair_Display/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Regular.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Regular.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype"), /* Safari, Android, iOS */ 
+        url("../fonts/Playfair_Display/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg"); /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+font-family: 'Playfair Display';
+    src: url("../fonts/Playfair_Display/PlayfairDisplay-Bold.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/Playfair_Display/PlayfairDisplay-Bold?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Bold.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Bold.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/Playfair_Display/PlayfairDisplay-Bold.ttf") format("truetype"), /* Safari, Android, iOS */ 
+        url("../fonts/Playfair_Display/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold") format("svg"); /* Legacy iOS */
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/*Post No Bills Jaffna Bold*/
+@font-face {
+font-family: 'Post No Bills Jaffna';
+    src: url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.eot"); /* IE9 Compat Modes */
+    src: local(""),
+        url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.woff2") format("woff2"), /* Super Modern Browsers */
+        url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.woff") format("woff"), /* Modern Browsers */
+        url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+        url("../fonts/post_no_bills_jaffna/PostNoBillsJaffna-Bold.svg#PostNoBillsJaffna-Bold") format("svg"); /* Legacy iOS */
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

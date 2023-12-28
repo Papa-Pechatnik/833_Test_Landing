@@ -1,5 +1,35 @@
-/* 
+/*
+1. root
+2.
+3.
+4. HEADER
+5. MAIN
+6. FOOTER
+7. MEDIA
+
+*/
+:root {
+    --color-white: #FFFFFF; /* var(--color-white, #FFFFFF); */
+    --color-black: #0F0F0F; /* var(--color-black, #0F0F0F); */
+    --color-shark: #1F1F1F; /* var(--color-shark, #1F1F1F); */
+    --color-gray: #969696; /* var(--color-gray, #969696); */
+    --color-light-gray: #D0D0D0; /* var(--color-light-gray, #D0D0D0); */
+}
+
+body {
 font-family: 'PT Sans', sans-serif;
+}
+
+/* 
+.container {
+
+} */
+
+
+
+
+/* 
+
 font-family: 'Playfair Display', serif;
 font-family: 'Post No Bills Jaffna Bold', sans-serif;
 
@@ -9,12 +39,6 @@ font-family: 'Post No Bills Jaffna Bold', sans-serif;
 
 
 
-/* body {
 
-}
-
-.container {
-
-} */
 
 

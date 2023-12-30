@@ -7,6 +7,7 @@
     4.2 nav
     4.3 slider
 5. MAIN
+    5.3 - Нові надходження
 6. FOOTER
 7. MEDIA
 
@@ -18,6 +19,7 @@
   --color-black: #000000; /* var(--color-black, #000000); */
   --color-light-black: #0f0f0f; /* var(--color-light-black, #0F0F0F); */
   --color-shark: #1f1f1f; /* var(--color-shark, #1F1F1F); */
+  --color-bunker: #191b1c; /* var(--color-bunker, #191B1C); */
   --color-gray: #969696; /* var(--color-gray, #969696); */
   --color-light-gray: #d0d0d0; /* var(--color-light-gray, #D0D0D0); */
 }
@@ -34,18 +36,32 @@ body {
   font-style: normal;
   font-weight: normal;
   line-height: normal;
-  border: 2px solid red;
+}
+
+h5,
+.product_item_price {
+  font-family: "Playfair Display", serif;
+}
+
+h5 {
+  font-size: 1.125rem; /*18px;*/
+  color: var(--color-white, #ffffff);
 }
 
 /* ---------- 3. CLASS ---------- */
 .container {
   margin-inline: auto;
-  max-width: 69.375rem; /* 1110px --> 1920px */
+  max-width: 73.125rem; /* 1110px --> 1920px */
 }
 
 .padding-box {
+  box-sizing: border-box;
   padding-left: clamp(1rem, 0.57109rem + 1.83vw, 1.875rem);
   padding-right: clamp(1rem, 0.57109rem + 1.83vw, 1.875rem);
+}
+
+.background-black {
+  background: var(--color-black, #000000);
 }
 
 /* ----------4. HEADER ---------- */
@@ -58,10 +74,6 @@ body {
 }
 
 /* ---------- 4.1 header ---------- */
-.header-background {
-  background: var(--color-black, #000000);
-}
-
 .header,
 .logo {
   padding-top: 0.875rem; /* 14px; */
@@ -245,17 +257,16 @@ body {
 }
 
 .slider-titel {
-position: absolute;
-top: 50%;
-left: 50%;
-/* margin-right: -50%; */
-transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* margin-right: -50%; */
+  transform: translate(-50%, -50%);
 
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-box {
@@ -276,7 +287,8 @@ justify-content: center;
   & .logo-img {
     width: clamp(6.5625rem, 145.455vw - 22.5285rem, 11.5625rem);
     border-bottom: 2px solid var(--color-white, #ffffff);
-    margin-bottom: 7px;
+    padding-bottom: 0.875rem;
+    margin-bottom: 0.4375rem;
   }
 }
 
@@ -288,6 +300,120 @@ justify-content: center;
   text-align: center;
   text-wrap: balance;
   text-transform: uppercase;
+}
+
+/* ---------- 5. MAIN ---------- */
+.new_product,
+.new_product_header,
+.product_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product_item {
+  position: relative;
+  &:hover {
+    & img {
+      transition: 0.5s ease-in-out;
+      transform: scale(1.1);
+    }
+    .product_item_btn {
+      transition: 0.5s ease-in-out;
+      transform: scale(1.1);
+      background: rgba(25, 27, 28, 0.5);
+    }
+  }
+}
+
+.product_img {
+  justify-content: center;
+  height: 325px;
+  overflow: hidden;
+  background: var(--color-bunker, #191b1c);
+  & img {
+    height: 82.7%;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.product_item_titel {
+  padding-top: 1.5625rem;
+  padding-bottom: 0.625rem;
+}
+
+.product_item__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.product_item_price {
+  color: var(--color-light-gray, #d0d0d0);
+  font-size: 1rem; /*17px;*/
+  font-weight: bold;
+}
+
+/* ---------- 5.3 - Нові надходження ---------- */
+.new_product {
+  padding-top: clamp(3.75rem, 1.0714rem + 13.393vw, 7.5rem); /* 120px; - 60px*/
+  padding-bottom: clamp(
+    3.75rem,
+    20.089vw - 0.2678rem,
+    9.375rem
+  ); /* 150px; - 60px*/
+}
+
+.new_product_header {
+  width: max-content;
+  font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+  & h1 {
+    font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  & div {
+    width: 30%;
+    height: 1px;
+    background: var(--color-white, #ffffff);
+    margin-top: clamp(1.25rem, 0.3572rem + 4.464vw, 2.5rem); /* 40px; - 20 px*/
+    margin-bottom: clamp(2.5rem, 0.7142rem + 8.929vw, 5rem); /* 80px; - 40 px*/
+  }
+}
+
+.new_product_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, max(260px));
+  justify-content: center;
+  gap: 40px 23px;
+  width: 100%;
+}
+
+.product_item_end {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  background: rgba(25, 27, 28, 0.5);
+}
+
+.product_item_btn {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+  background: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: .75rem 1.75rem;
+  border: 1px solid var(--color-white, #ffffff);
+  transition: 0.5s ease-in-out;
 }
 
 /* ---------- 7. MEDIA ---------- */
@@ -320,7 +446,7 @@ justify-content: center;
 }
 /* 
 
-font-family: 'Playfair Display', serif;
+
 font-family: 'Post No Bills Jaffna Bold', sans-serif;
 
 

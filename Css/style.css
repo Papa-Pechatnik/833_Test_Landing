@@ -8,6 +8,7 @@
     4.3 slider
 5. MAIN
     5.3 - Нові надходження
+    5.4 - Статті
     5.5 - footer
 6. FOOTER
 7. MEDIA
@@ -68,13 +69,13 @@ h5 {
   background: var(--color-light-black, #0f0f0f);
 }
 
-
-.header-box h1{
+.header-box h1 {
   font-family: "Playfair Display", serif;
   color: var(--color-white, #ffffff);
   font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .header-box_line {
@@ -374,7 +375,11 @@ h5 {
 /* ---------- 5.3 - Нові надходження ---------- */
 .new_product {
   padding-top: clamp(3.75rem, 1.0714rem + 13.393vw, 7.5rem); /* 120px; - 60px*/
-  padding-bottom: clamp(3.75rem, 20.089vw - 0.2678rem, 9.375rem); /* 150px; - 60px*/
+  padding-bottom: clamp(
+    3.75rem,
+    20.089vw - 0.2678rem,
+    9.375rem
+  ); /* 150px; - 60px*/
   & .header-box_line {
     margin-top: clamp(1.25rem, 0.3572rem + 4.464vw, 2.5rem); /* 40px; - 20 px*/
     margin-bottom: clamp(2.5rem, 0.7142rem + 8.929vw, 5rem); /* 80px; - 40 px*/
@@ -412,14 +417,163 @@ h5 {
   transition: 0.5s ease-in-out;
 }
 
+/* ---------- 5.4 - Статті ---------- */
+
+.news_articles {
+  padding-top: clamp(1.5rem, 0.05555rem + 6.163vw, 4rem); /* 64px; - 24px*/
+  & .header-box_line {
+    margin-top: clamp(1rem, 0.27766rem + 3.082vw, 2.25rem); /* 36px; - 16 px*/
+    margin-bottom: clamp(
+      1.5rem,
+      0.3443rem + 4.931vw,
+      3.5rem
+    ); /* 56px; - 24 px*/
+  }
+}
+
+.article_items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.25rem;
+}
+
+.article_item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* max-height: max-content; */
+}
+
+.article_picture {
+  height: 27.3125rem;
+  flex: 1 1 auto;
+  min-width: 320px;
+  aspect-ratio: 1/1;
+}
+
+.picture_img1 {
+  background-image: image-set(
+    url("../Img/article/img_big/article_img1_1920.avif")
+      type("image/avif") 2x,
+    url("../Img/article/img_small/article_img1_sm.avif")
+      type("image/avif") 1x,
+    url("../Img/article/img_big/article_img1_1920.webp")
+      type("image/webp") 2x,
+    url("../Img/article/img_small/article_img1_sm.webp")
+      type("image/webp") 1x, 
+    url("../Img/article/img_big/article_img1_1920.png") 2x,
+    url("../Img/article/img_small/article_img1_sm.png") 1x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picture_img2 {
+  background-image: image-set(
+    url("../Img/article/img_big/article_img2_1920.avif")
+      type("image/avif") 2x,
+    url("../Img/article/img_small/article_img2_sm.avif")
+      type("image/avif") 1x,
+    url("../Img/article/img_big/article_img2_1920.webp")
+      type("image/webp") 2x,
+    url("../Img/article/img_small/article_img2_sm.webp")
+      type("image/webp") 1x, 
+    url("../Img/article/img_big/article_img2_1920.png") 2x,
+    url("../Img/article/img_small/article_img2_sm.png") 1x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.picture_img3 {
+  background-image: image-set(
+    url("../Img/article/img_big/article_img3_1920.avif")
+      type("image/avif") 2x,
+    url("../Img/article/img_small/article_img3_sm.avif")
+      type("image/avif") 1x,
+    url("../Img/article/img_big/article_img3_1920.webp")
+      type("image/webp") 2x,
+    url("../Img/article/img_small/article_img3_sm.webp")
+      type("image/webp") 1x, 
+    url("../Img/article/img_big/article_img3_1920.png") 2x,
+    url("../Img/article/img_small/article_img3_sm.png") 1x
+  );
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.article_box {
+  flex: 0 1 48.5%;
+  display: flex;
+  justify-content: center;
+
+  font-size: 1.125rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: var(--color-white, #ffffff);
+  margin-top: 3.3125rem;
+  margin-bottom: 3.3125rem;
+  & .box_item {
+    max-width: 689px;
+    min-width: 510px;
+  }
+  & .article_text {
+    font-size: .875rem;
+    line-height: 1.5; /* 21px */
+    text-wrap: wrap;
+    margin-top: .875rem;
+    margin-bottom: 2.4375rem;
+  }
+}
+
+.article_read {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  border: 1px solid yellowgreened;
+}
+
+.article_read__link {
+  color: var(--color-white, #ffffff);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: .75rem 1.75rem;
+  border: 1px solid var(--color-white, #ffffff);
+}
+
+.article_subtitle {
+  margin-left: .5rem;
+  text-align: right;
+}
 
 /* ---------- 5.5 - footer ---------- */
-.partners_brends  {
-  padding-top: clamp(2.8125rem, 0.12891rem + 11.45vw, 5.625rem); /* 90px; - 45px*/
-  padding-bottom: clamp(3.125rem, 14.249vw  -0.21461rem, 6.625rem);/* 106px; - 50px*/
+.partners_brends {
+  padding-top: clamp(
+    2.8125rem,
+    0.12891rem + 11.45vw,
+    5.625rem
+  ); /* 90px; - 45px*/
+  padding-bottom: clamp(
+    3.125rem,
+    14.249vw -0.21461rem,
+    6.625rem
+  ); /* 106px; - 50px*/
   & .header-box_line {
     margin-top: clamp(1rem, 0.64211rem + 1.527vw, 1.375rem); /* 22px; - 16 px*/
-    margin-bottom: clamp(1.75rem, 0.08875rem + 7.088vw, 4.625rem); /* 74px; - 28 px*/
+    margin-bottom: clamp(
+      1.75rem,
+      0.08875rem + 7.088vw,
+      4.625rem
+    ); /* 74px; - 28 px*/
   }
 }
 
@@ -427,34 +581,46 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: clamp(1rem, 0.16516rem + 3.562vw, 1.875rem); /* 768px -30px; 375px - 16 px*/
+  column-gap: clamp(
+    1rem,
+    0.16516rem + 3.562vw,
+    1.875rem
+  ); /* 768px -30px; 375px - 16 px*/
   font-size: 1.125rem;
   & li {
     &:nth-child(1) {
       width: 369px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.avif') type('image/avif') 2x,
-        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.avif') type('image/avif') 1x,
-        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.webp') type('image/webp') 2x,
-        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.webp') type('image/webp') 1x,
-        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.png') 2x,
-        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.png') 1x
+        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.avif")
+          type("image/avif") 2x,
+        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.avif")
+          type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.webp")
+          type("image/webp") 2x,
+        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.webp")
+          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.png") 2x,
+        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.png") 1x
       );
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;       
+      background-size: contain;
     }
     &:nth-child(2) {
       width: 279px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.avif') type('image/avif') 2x,
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.avif') type('image/avif') 1x,
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.webp') type('image/webp') 2x,
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.webp') type('image/webp') 1x,
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.png') 2x,
-        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.png') 1x
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.avif")
+          type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.avif")
+          type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.webp")
+          type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.webp")
+          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.png") 2x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.png") 1x
       );
       background-position: center;
       background-repeat: no-repeat;
@@ -464,12 +630,16 @@ h5 {
       width: 271px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.avif') type('image/avif') 2x,
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.avif') type('image/avif') 1x,
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.webp') type('image/webp') 2x,
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.webp') type('image/webp') 1x,
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.png') 2x,
-        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.png') 1x
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.avif")
+          type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.avif")
+          type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.webp")
+          type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.webp")
+          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.png") 2x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.png") 1x
       );
       background-position: center;
       background-repeat: no-repeat;
@@ -479,12 +649,16 @@ h5 {
       width: 376px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.avif') type('image/avif') 2x,
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.avif') type('image/avif') 1x,
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.webp') type('image/webp') 2x,
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.webp') type('image/webp') 1x,
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.png') 2x,
-        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.png') 1x
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.avif")
+          type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.avif")
+          type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.webp")
+          type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.webp")
+          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.png") 2x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.png") 1x
       );
       background-position: center;
       background-repeat: no-repeat;
@@ -494,6 +668,23 @@ h5 {
 }
 
 /* ---------- 7. MEDIA ---------- */
+@media screen and (max-width: 959.98px) {
+  .article_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .article_box {
+    margin-bottom: 1.25rem;
+    & .box_item {
+      width: 43.0625rem;
+      min-width: 18.5rem;
+    }
+  }
+  .article_read__link {
+    padding: 1rem;
+  }
+}
+
 @media screen and (max-width: 719.98px) {
   .nav_mob {
     display: block;
@@ -520,12 +711,9 @@ h5 {
   .phone_line {
     display: none;
   }
+
+  .article_subtitle {
+    font-size: 16px;
+  }
 }
-/* 
-
-
-font-family: 'Post No Bills Jaffna Bold', sans-serif;
-
-
-
-*/
+/*font-family: 'Post No Bills Jaffna Bold', sans-serif;*/

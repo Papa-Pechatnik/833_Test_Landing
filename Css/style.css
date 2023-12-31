@@ -8,11 +8,11 @@
     4.3 slider
 5. MAIN
     5.3 - Нові надходження
+    5.5 - footer
 6. FOOTER
 7. MEDIA
 
 */
-
 /* ---------- 1. root ---------- */
 :root {
   --color-white: #ffffff; /* var(--color-white, #FFFFFF); */
@@ -64,6 +64,33 @@ h5 {
   background: var(--color-black, #000000);
 }
 
+.background-light-black {
+  background: var(--color-light-black, #0f0f0f);
+}
+
+
+.header-box h1{
+  font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+  font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.header-box_line {
+  width: 120px;
+  height: 1px;
+  background: var(--color-white, #ffffff);
+}
+
+.new_product,
+.header-box,
+.product_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ----------4. HEADER ---------- */
 .header,
 .menu,
@@ -109,10 +136,10 @@ h5 {
   display: flex;
   align-items: center;
   &:hover {
-    .phone_online {
+    & .phone_online {
       color: var(--color-white, #ffffff);
     }
-    .phone_icon {
+    & .phone_icon {
       fill: var(--color-white, #ffffff);
     }
   }
@@ -147,9 +174,10 @@ h5 {
   display: flex;
   align-items: center;
   column-gap: 1.1875rem; /* 19px;*/
+  cursor: pointer;
   &:hover {
     color: var(--color-white, #ffffff);
-    .entrance_icon {
+    & .entrance_icon {
       fill: var(--color-white, #ffffff);
     }
   }
@@ -162,10 +190,6 @@ h5 {
 }
 
 /* ---------- 4.2 nav ---------- */
-.nav-background {
-  background: var(--color-light-black, #0f0f0f);
-}
-
 .nav {
   display: flex;
   justify-content: space-between;
@@ -179,7 +203,7 @@ h5 {
 
 .nav_item:hover {
   background: var(--color-shark, #1f1f1f);
-  .nav_item__link {
+  & .nav_item__link {
     color: var(--color-white, #ffffff);
   }
 }
@@ -271,10 +295,8 @@ h5 {
 
 .logo-box {
   box-sizing: border-box;
-
   width: clamp(12.5rem, 218.182vw - 31.1364rem, 20rem); /* 320px; - 200px; */
   height: clamp(12.5rem, 218.182vw - 31.1364rem, 20rem); /* 320px; - 200px; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,24 +325,16 @@ h5 {
 }
 
 /* ---------- 5. MAIN ---------- */
-.new_product,
-.new_product_header,
-.product_img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .product_item {
   position: relative;
   &:hover {
     & img {
       transition: 0.5s ease-in-out;
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
     .product_item_btn {
       transition: 0.5s ease-in-out;
-      transform: scale(1.1);
+      transform: scale(1.15);
       background: rgba(25, 27, 28, 0.5);
     }
   }
@@ -360,26 +374,8 @@ h5 {
 /* ---------- 5.3 - Нові надходження ---------- */
 .new_product {
   padding-top: clamp(3.75rem, 1.0714rem + 13.393vw, 7.5rem); /* 120px; - 60px*/
-  padding-bottom: clamp(
-    3.75rem,
-    20.089vw - 0.2678rem,
-    9.375rem
-  ); /* 150px; - 60px*/
-}
-
-.new_product_header {
-  width: max-content;
-  font-family: "Playfair Display", serif;
-  color: var(--color-white, #ffffff);
-  & h1 {
-    font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  & div {
-    width: 30%;
-    height: 1px;
-    background: var(--color-white, #ffffff);
+  padding-bottom: clamp(3.75rem, 20.089vw - 0.2678rem, 9.375rem); /* 150px; - 60px*/
+  & .header-box_line {
     margin-top: clamp(1.25rem, 0.3572rem + 4.464vw, 2.5rem); /* 40px; - 20 px*/
     margin-bottom: clamp(2.5rem, 0.7142rem + 8.929vw, 5rem); /* 80px; - 40 px*/
   }
@@ -411,9 +407,90 @@ h5 {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.125rem;
-  padding: .75rem 1.75rem;
+  padding: 0.75rem 1.75rem;
   border: 1px solid var(--color-white, #ffffff);
   transition: 0.5s ease-in-out;
+}
+
+
+/* ---------- 5.5 - footer ---------- */
+.partners_brends  {
+  padding-top: clamp(2.8125rem, 0.12891rem + 11.45vw, 5.625rem); /* 90px; - 45px*/
+  padding-bottom: clamp(3.125rem, 14.249vw  -0.21461rem, 6.625rem);/* 106px; - 50px*/
+  & .header-box_line {
+    margin-top: clamp(1rem, 0.64211rem + 1.527vw, 1.375rem); /* 22px; - 16 px*/
+    margin-bottom: clamp(1.75rem, 0.08875rem + 7.088vw, 4.625rem); /* 74px; - 28 px*/
+  }
+}
+
+.partners_logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: clamp(1rem, 0.16516rem + 3.562vw, 1.875rem); /* 768px -30px; 375px - 16 px*/
+  font-size: 1.125rem;
+  & li {
+    &:nth-child(1) {
+      width: 369px;
+      aspect-ratio: 1/1;
+      background-image: image-set(
+        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.avif') type('image/avif') 2x,
+        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.avif') type('image/avif') 1x,
+        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.webp') type('image/webp') 2x,
+        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.webp') type('image/webp') 1x,
+        url('../Img/logo_brends/img_1920/coco_logo_brend_1920.png') 2x,
+        url('../Img/logo_brends/img_1024/coco_logo_brend_1024.png') 1x
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;       
+    }
+    &:nth-child(2) {
+      width: 279px;
+      aspect-ratio: 1/1;
+      background-image: image-set(
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.avif') type('image/avif') 2x,
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.avif') type('image/avif') 1x,
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.webp') type('image/webp') 2x,
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.webp') type('image/webp') 1x,
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1920.png') 2x,
+        url('../Img/logo_brends/img_1920/rolex_logo_brend_1024.png') 1x
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(3) {
+      width: 271px;
+      aspect-ratio: 1/1;
+      background-image: image-set(
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.avif') type('image/avif') 2x,
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.avif') type('image/avif') 1x,
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.webp') type('image/webp') 2x,
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.webp') type('image/webp') 1x,
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1920.png') 2x,
+        url('../Img/logo_brends/img_1920/breguets_logo_brend_1024.png') 1x
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &:nth-child(4) {
+      width: 376px;
+      aspect-ratio: 1/1;
+      background-image: image-set(
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.avif') type('image/avif') 2x,
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.avif') type('image/avif') 1x,
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.webp') type('image/webp') 2x,
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.webp') type('image/webp') 1x,
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1920.png') 2x,
+        url('../Img/logo_brends/img_1920/haven_logo_brend_1024.png') 1x
+      );
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
 }
 
 /* ---------- 7. MEDIA ---------- */

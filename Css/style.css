@@ -7,6 +7,9 @@
     4.2 nav
     4.3 slider
 5. MAIN
+    5.0 - Загальні класи продукту
+    5.1. - СЕЗОН 2021/22
+
     5.3 - Нові надходження
     5.4 - Статті
     5.5 - footer
@@ -14,6 +17,7 @@
 7. MEDIA
 
 */
+
 /* ---------- 1. root ---------- */
 :root {
   --color-white: #ffffff; /* var(--color-white, #FFFFFF); */
@@ -37,21 +41,37 @@ body {
   line-height: normal;
 }
 
-h2,
-h5,
-.product_item_price {
+h1,
+h2 {
   font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+  font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
+  text-transform: uppercase;
+  text-align: center;
+  line-height: normal;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 h2 {
+  font-weight: normal;
+}
+
+h3,
+h5 {
+  font-family: "Playfair Display", serif;
   color: var(--color-white, #ffffff);
+}
+
+h3 {
   font-size: 24px;
   text-transform: uppercase;
 }
 
 h5 {
   font-size: 1.125rem; /*18px;*/
-  color: var(--color-white, #ffffff);
 }
 
 /* ---------- 3. CLASS ---------- */
@@ -74,15 +94,6 @@ h5 {
   background: var(--color-light-black, #0f0f0f);
 }
 
-.header-box h1 {
-  font-family: "Playfair Display", serif;
-  color: var(--color-white, #ffffff);
-  font-size: clamp(1.5rem, 0.9642rem + 2.679vw, 2.25rem); /* 36px; - 24px*/
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .header-box_line {
   width: 120px;
   height: 1px;
@@ -95,6 +106,24 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.btn__link {
+  color: var(--color-white, #ffffff);
+  font-family: "PT Sans", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 12px 28px;
+  border: 1px solid var(--color-white, #ffffff);
+  transition: 0.5s ease-in-out;
+  &:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transition: 0.5s ease-in-out;
+  }
 }
 
 /* ----------4. HEADER ---------- */
@@ -214,6 +243,10 @@ h5 {
   }
 }
 
+.nav_aktiv {
+  background: var(--color-shark, #1f1f1f);
+}
+
 .nav_item__link {
   display: inline-block;
   font-size: 0.875rem; /* 14px; */
@@ -331,6 +364,7 @@ h5 {
 }
 
 /* ---------- 5. MAIN ---------- */
+/* ---------- 5.0 - Загальні класи продукту ---------- */
 .product_item {
   position: relative;
   &:hover {
@@ -372,9 +406,96 @@ h5 {
 }
 
 .product_item_price {
+  font-family: "Playfair Display", serif;
   color: var(--color-light-gray, #d0d0d0);
   font-size: 1rem; /*17px;*/
   font-weight: bold;
+}
+
+.product_item_btn {
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+  background: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  padding: 0.75rem 1.75rem;
+  border: 1px solid var(--color-white, #ffffff);
+  transition: 0.5s ease-in-out;
+}
+
+/* ---------- 5.1. - СЕЗОН 2021/22 ---------- */
+.new_season {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.new_season_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, max(260px));
+  justify-content: center;
+  gap: 30px 50px;
+  width: 100%;
+}
+
+.season_box {
+  flex: 0 1 54.15vw;
+  display: flex;
+  justify-content: center;
+}
+
+.season_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 880px;
+  & .header-box_line {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+/*!--------------------------------------------------*/
+.season_collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  flex: 1 1 auto;
+  min-width: 320px;
+  max-height: 730px;
+  height: 67.8vw;
+  min-height: 375px;
+  aspect-ratio: 1/1;
+}
+
+.collection_background {
+  background-image: image-set(
+    url("../Img/collection/new_collection_big.avif") type("image/avif") 2x,
+    url("../Img/collection/new_collection_sm.avif") type("image/avif") 1x,
+    url("../Img/collection/new_collection_big.webp") type("image/webp") 2x,
+    url("../Img/collection/new_collection_sm.webp") type("image/webp") 1x,
+    url("../Img/collection/new_collection_big.jpg") 2x,
+    url("../Img/collection/new_collection_sm.jpg") 1x
+  );
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  & .header-box_line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 /* ---------- 5.3 - Нові надходження ---------- */
@@ -409,19 +530,6 @@ h5 {
   background: rgba(25, 27, 28, 0.5);
 }
 
-.product_item_btn {
-  position: absolute;
-  font-family: "Playfair Display", serif;
-  color: var(--color-white, #ffffff);
-  background: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.125rem;
-  padding: 0.75rem 1.75rem;
-  border: 1px solid var(--color-white, #ffffff);
-  transition: 0.5s ease-in-out;
-}
-
 /* ---------- 5.4 - Статті ---------- */
 
 .news_articles {
@@ -449,10 +557,12 @@ h5 {
 }
 
 .article_picture {
-  height: 27.3125rem;
+  max-height: 437px;
+  height: 40vw;
+  min-height: 375px;
   flex: 1 1 auto;
   min-width: 320px;
-  aspect-ratio: 1/1;
+  /* aspect-ratio: 1/1; */
 }
 
 .picture_img1 {
@@ -527,24 +637,6 @@ h5 {
   align-items: flex-end;
 
   border: 1px solid yellowgreened;
-}
-
-.article_read__link {
-  color: var(--color-white, #ffffff);
-  font-family: "PT Sans", sans-serif;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: normal;
-  line-height: normal;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  padding: 0.75rem 1.75rem;
-  border: 1px solid var(--color-white, #ffffff);
-  transition: 0.5s ease-in-out;
-  &:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transition: 0.5s ease-in-out;
-  }
 }
 
 .article_subtitle {
@@ -663,7 +755,7 @@ h5 {
     }
   }
 }
-/*!------------------------------------------------------------------------------/
+
 /* ---------- 6. FOOTER ---------- */
 .footer_background {
   background-image: linear-gradient(
@@ -695,7 +787,7 @@ h5 {
   font-size: 0.875rem;
   line-height: 1.5; /* 21px */
   text-wrap: balance;
-  & h2 {
+  & h3 {
     margin-bottom: clamp(1.5rem, 0.41297rem + 4.638vw, 2.5rem);
   }
   & section:nth-of-type(n) {
@@ -735,13 +827,12 @@ h5 {
     margin-top: 1.625rem;
   }
   & button,
-    input {
+  input {
     font-family: "PT Sans", sans-serif;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: normal;
     line-height: 1.5; /* 21px */
-    
   }
   & button {
     color: var(--color-white, #ffffff);
@@ -797,7 +888,29 @@ h5 {
 }
 
 /* ---------- 7. MEDIA ---------- */
+@media screen and (max-width: 1319.98px) {
+  .new_season_products {
+    gap: 50px 10px;
+  }
+  .season_item {
+    width: 540px;
+    & .new_season_products :nth-of-type(3) {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 959.98px) {
+  .new_season {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .season_box {
+    padding-top: clamp(2.5rem, -1.11598rem + 10.714vw, 5.3125rem);
+    padding-bottom: clamp(3.75rem, 1.7412rem + 5.952vw, 5.3125rem);
+  }
+
   .article_item {
     display: flex;
     flex-direction: column;
@@ -808,9 +921,9 @@ h5 {
       width: 43.0625rem;
       min-width: 18.5rem;
     }
-  }
-  .article_read__link {
-    padding: 1rem;
+    & .btn__link {
+      padding: 1rem;
+    }
   }
 
   .company {
@@ -839,6 +952,10 @@ h5 {
 }
 
 @media screen and (max-width: 563.98px) {
+  .season_item .new_season_products :nth-of-type(3) {
+      display: block;
+  }
+
   .schedule_info {
     order: 2;
     & .phone_line {
@@ -860,4 +977,3 @@ h5 {
     font-size: 1rem;
   }
 }
-/*font-family: 'Post No Bills Jaffna Bold', sans-serif;*/

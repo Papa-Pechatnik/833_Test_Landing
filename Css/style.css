@@ -27,6 +27,7 @@
   --color-bunker: #191b1c; /* var(--color-bunker, #191B1C); */
   --color-gray: #969696; /* var(--color-gray, #969696); */
   --color-light-gray: #d0d0d0; /* var(--color-light-gray, #D0D0D0); */
+  --fixed: 122px;
 }
 
 /* ---------- 2. TAGS ---------- */
@@ -137,6 +138,14 @@ h5 {
 }
 
 /* ---------- 4.1 header ---------- */
+.header-fix {
+  width: 100vw;
+  position: fixed;
+  top:0;
+  height: max-content;
+  z-index: 10;
+}
+
 .header,
 .logo {
   padding-top: 0.875rem; /* 14px; */
@@ -317,18 +326,39 @@ h5 {
 }
 
 .slider {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--fixed);
   position: relative;
   width: 100vw;
-  height: 75vh;
+  height: 86.75vh;
+  /* height: 75vh; */
+  /* padding-top: 122px; */
   min-height: 46.875rem; /* 750px*/
-  background-color: yellow;
+  overflow: hidden;
 }
+
+.slider_background {
+  background-image: 
+  linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
+  image-set(
+    url("../Img/slide/slide_1_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_1_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_1_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_1_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_1_big.jpg") 2x,
+    url("../Img/slide/slide_1_sm.jpg") 1x
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 .slider-titel {
   position: absolute;
-  top: 50%;
+  top: calc(50% + var(--fixed)/2);
   left: 50%;
-  /* margin-right: -50%; */
   transform: translate(-50%, -50%);
 
   display: flex;
@@ -359,7 +389,7 @@ h5 {
 }
 
 .logo-subtitle {
-  max-width: 45.625rem; /* 730px; */
+  width: clamp(17.5rem, -2.5892rem + 100.446vw, 45.625rem);
   font-size: clamp(0.75rem, 7.273vw - 0.7046rem, 1rem);
   line-height: 150%; /* 24px */
   color: var(--color-white, #ffffff);
@@ -375,11 +405,11 @@ h5 {
   &:hover {
     & img {
       transition: 0.5s ease-in-out;
-      transform: scale(1.35);
+      transform: scale(1.25);
     }
     .product_item_btn {
       transition: 0.5s ease-in-out;
-      transform: scale(1.35);
+      transform: scale(1.25);
       background: rgba(25, 27, 28, 0.5);
     }
   }
@@ -504,7 +534,6 @@ h5 {
   }
 }
 
-/*!--------------------------------------------------*/
 /* ---------- 5.2 - колекція 2018 ---------- */
 .old_season {
   display: flex;
@@ -546,8 +575,8 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-    margin-left: clamp(1.25rem, -16.4164rem + 29.444vw, 7.875rem);
-    margin-right: clamp(3.875rem, -14.125rem + 30vw, 10.625rem);
+    margin-left: clamp(0rem, -21rem + 35vw, 7.875rem);
+    margin-right: clamp(0rem, -28.3332rem + 47.222vw, 10.625rem);
   & .header-box_line {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -974,7 +1003,7 @@ width: 100vw;
   }
 }
 
-@media screen and (max-width: 719.98px) {
+@media screen and (max-width: 719.98px), (max-height: 563.98px){
   .nav_mob {
     display: block;
   }

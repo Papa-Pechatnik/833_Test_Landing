@@ -8,8 +8,8 @@
     4.3 slider
 5. MAIN
     5.0 - Загальні класи продукту
-    5.1. - СЕЗОН 2021/22
-
+    5.1 - СЕЗОН 2021/22
+    5.2 - колекція 2018
     5.3 - Нові надходження
     5.4 - Статті
     5.5 - footer
@@ -51,18 +51,18 @@ h2 {
   line-height: normal;
 }
 
+h3,
+h5 {
+  font-family: "Playfair Display", serif;
+  color: var(--color-white, #ffffff);
+}
+
 h1 {
   font-weight: bold;
 }
 
 h2 {
   font-weight: normal;
-}
-
-h3,
-h5 {
-  font-family: "Playfair Display", serif;
-  color: var(--color-white, #ffffff);
 }
 
 h3 {
@@ -109,6 +109,7 @@ h5 {
 }
 
 .btn__link {
+  display: inline-block;
   color: var(--color-white, #ffffff);
   font-family: "PT Sans", sans-serif;
   font-size: 1.125rem;
@@ -311,6 +312,10 @@ h5 {
 }
 
 /* ---------- 4.3 slider ---------- */
+.off {
+  display: none;
+}
+
 .slider {
   position: relative;
   width: 100vw;
@@ -370,11 +375,11 @@ h5 {
   &:hover {
     & img {
       transition: 0.5s ease-in-out;
-      transform: scale(1.15);
+      transform: scale(1.35);
     }
     .product_item_btn {
       transition: 0.5s ease-in-out;
-      transform: scale(1.15);
+      transform: scale(1.35);
       background: rgba(25, 27, 28, 0.5);
     }
   }
@@ -386,7 +391,7 @@ h5 {
   overflow: hidden;
   background: var(--color-bunker, #191b1c);
   & img {
-    height: 82.7%;
+    height: 100%;
     transition: 0.5s ease-in-out;
   }
 }
@@ -425,7 +430,7 @@ h5 {
   transition: 0.5s ease-in-out;
 }
 
-/* ---------- 5.1. - СЕЗОН 2021/22 ---------- */
+/* ---------- 5.1 - СЕЗОН 2021/22 ---------- */
 .new_season {
   display: flex;
   flex-direction: row;
@@ -458,7 +463,6 @@ h5 {
   }
 }
 
-/*!--------------------------------------------------*/
 .season_collection {
   display: flex;
   flex-direction: column;
@@ -474,7 +478,9 @@ h5 {
 }
 
 .collection_background {
-  background-image: image-set(
+  background-image: 
+  linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
+  image-set(
     url("../Img/collection/new_collection_big.avif") type("image/avif") 2x,
     url("../Img/collection/new_collection_sm.avif") type("image/avif") 1x,
     url("../Img/collection/new_collection_big.webp") type("image/webp") 2x,
@@ -498,14 +504,68 @@ h5 {
   }
 }
 
+/*!--------------------------------------------------*/
+/* ---------- 5.2 - колекція 2018 ---------- */
+.old_season {
+  display: flex;
+}
+
+.old_background {
+  flex: 1 1 auto;
+  width: 969px;
+  min-width: 320px;
+  max-height: 600px;
+  height: 55.56vw;
+  min-height: 375px;
+  aspect-ratio: 1/1;
+    background-image: 
+    linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
+      image-set(
+      url("../Img/collection/old_collection_big.avif") type("image/avif") 2x,
+      url("../Img/collection/old_collection_sm.avif") type("image/avif") 1x,
+      url("../Img/collection/old_collection_big.webp") type("image/webp") 2x,
+      url("../Img/collection/old_collection_sm.webp") type("image/webp") 1x,
+      url("../Img/collection/old_collection_big.jpg") 2x,
+      url("../Img/collection/old_collection_sm.jpg") 1x
+    );
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.old_box {
+  flex: 0 1 51.25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.old_item {
+  min-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    margin-left: clamp(1.25rem, -16.4164rem + 29.444vw, 7.875rem);
+    margin-right: clamp(3.875rem, -14.125rem + 30vw, 10.625rem);
+  & .header-box_line {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  & .box-text {
+    color: var(--color-white, #ffffff);
+    font-size: 0.875rem;
+    line-height: 1.5; /* 21px */
+    text-align: center;
+    text-wrap: balance;
+    padding-bottom: 64px;
+  }
+}
+
 /* ---------- 5.3 - Нові надходження ---------- */
 .new_product {
   padding-top: clamp(3.75rem, 1.0714rem + 13.393vw, 7.5rem); /* 120px; - 60px*/
-  padding-bottom: clamp(
-    3.75rem,
-    20.089vw - 0.2678rem,
-    9.375rem
-  ); /* 150px; - 60px*/
+  padding-bottom: clamp(3.75rem, 20.089vw - 0.2678rem, 9.375rem); /* 150px; - 60px*/
   & .header-box_line {
     margin-top: clamp(1.25rem, 0.3572rem + 4.464vw, 2.5rem); /* 40px; - 20 px*/
     margin-bottom: clamp(2.5rem, 0.7142rem + 8.929vw, 5rem); /* 80px; - 40 px*/
@@ -536,11 +596,7 @@ h5 {
   padding-top: clamp(1.5rem, 0.05555rem + 6.163vw, 4rem); /* 64px; - 24px*/
   & .header-box_line {
     margin-top: clamp(1rem, 0.27766rem + 3.082vw, 2.25rem); /* 36px; - 16 px*/
-    margin-bottom: clamp(
-      1.5rem,
-      0.3443rem + 4.931vw,
-      3.5rem
-    ); /* 56px; - 24 px*/
+    margin-bottom: clamp(1.5rem, 0.3443rem + 4.931vw, 3.5rem); /* 56px; - 24 px*/
   }
 }
 
@@ -646,23 +702,11 @@ h5 {
 
 /* ---------- 5.5 - footer ---------- */
 .partners_brends {
-  padding-top: clamp(
-    2.8125rem,
-    0.12891rem + 11.45vw,
-    5.625rem
-  ); /* 90px; - 45px*/
-  padding-bottom: clamp(
-    3.125rem,
-    14.249vw -0.21461rem,
-    6.625rem
-  ); /* 106px; - 50px*/
+  padding-top: clamp(2.8125rem, 0.12891rem + 11.45vw, 5.625rem); /* 90px; - 45px*/
+  padding-bottom: clamp(3.125rem, 14.249vw -0.21461rem, 6.625rem); /* 106px; - 50px*/
   & .header-box_line {
     margin-top: clamp(1rem, 0.64211rem + 1.527vw, 1.375rem); /* 22px; - 16 px*/
-    margin-bottom: clamp(
-      1.75rem,
-      0.08875rem + 7.088vw,
-      4.625rem
-    ); /* 74px; - 28 px*/
+    margin-bottom: clamp(1.75rem, 0.08875rem + 7.088vw, 4.625rem); /* 74px; - 28 px*/
   }
 }
 
@@ -670,25 +714,17 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: clamp(
-    1rem,
-    0.16516rem + 3.562vw,
-    1.875rem
-  ); /* 768px -30px; 375px - 16 px*/
+  column-gap: clamp(1rem, 0.16516rem + 3.562vw, 1.875rem); /* 768px -30px; 375px - 16 px*/
   font-size: 1.125rem;
   & li {
     &:nth-child(1) {
       width: 369px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.avif")
-          type("image/avif") 2x,
-        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.avif")
-          type("image/avif") 1x,
-        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.webp")
-          type("image/webp") 2x,
-        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.webp")
-          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.avif") type("image/avif") 2x,
+        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.avif") type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/coco_logo_brend_1920.webp") type("image/webp") 2x,
+        url("../Img/logo_brends/img_1024/coco_logo_brend_1024.webp") type("image/webp") 1x,
         url("../Img/logo_brends/img_1920/coco_logo_brend_1920.png") 2x,
         url("../Img/logo_brends/img_1024/coco_logo_brend_1024.png") 1x
       );
@@ -700,14 +736,10 @@ h5 {
       width: 279px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.avif")
-          type("image/avif") 2x,
-        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.avif")
-          type("image/avif") 1x,
-        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.webp")
-          type("image/webp") 2x,
-        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.webp")
-          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.avif") type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.avif") type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.webp") type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.webp") type("image/webp") 1x,
         url("../Img/logo_brends/img_1920/rolex_logo_brend_1920.png") 2x,
         url("../Img/logo_brends/img_1920/rolex_logo_brend_1024.png") 1x
       );
@@ -719,14 +751,10 @@ h5 {
       width: 271px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.avif")
-          type("image/avif") 2x,
-        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.avif")
-          type("image/avif") 1x,
-        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.webp")
-          type("image/webp") 2x,
-        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.webp")
-          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.avif") type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.avif") type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.webp") type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.webp") type("image/webp") 1x,
         url("../Img/logo_brends/img_1920/breguets_logo_brend_1920.png") 2x,
         url("../Img/logo_brends/img_1920/breguets_logo_brend_1024.png") 1x
       );
@@ -738,14 +766,10 @@ h5 {
       width: 376px;
       aspect-ratio: 1/1;
       background-image: image-set(
-        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.avif")
-          type("image/avif") 2x,
-        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.avif")
-          type("image/avif") 1x,
-        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.webp")
-          type("image/webp") 2x,
-        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.webp")
-          type("image/webp") 1x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.avif") type("image/avif") 2x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.avif") type("image/avif") 1x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1920.webp") type("image/webp") 2x,
+        url("../Img/logo_brends/img_1920/haven_logo_brend_1024.webp") type("image/webp") 1x,
         url("../Img/logo_brends/img_1920/haven_logo_brend_1920.png") 2x,
         url("../Img/logo_brends/img_1920/haven_logo_brend_1024.png") 1x
       );
@@ -758,11 +782,7 @@ h5 {
 
 /* ---------- 6. FOOTER ---------- */
 .footer_background {
-  background-image: linear-gradient(
-      0deg,
-      rgba(15, 15, 15, 0.85) 0%,
-      rgba(15, 15, 15, 0.85) 100%
-    ),
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.85) 0%, rgba(15, 15, 15, 0.85) 100%),
     image-set(
       url("../Img/footer/footer_background_big.avif") type("image/avif") 2x,
       url("../Img/footer/footer_background_sm.avif") type("image/avif") 1x,
@@ -901,6 +921,22 @@ h5 {
 }
 
 @media screen and (max-width: 959.98px) {
+  .old_season {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  
+  .old_box {
+width: 100vw;
+  }
+  
+  .old_item {
+    width: inherit;
+    min-width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+  }
+  
   .new_season {
     display: flex;
     flex-direction: column;
@@ -953,7 +989,7 @@ h5 {
 
 @media screen and (max-width: 563.98px) {
   .season_item .new_season_products :nth-of-type(3) {
-      display: block;
+    display: block;
   }
 
   .schedule_info {

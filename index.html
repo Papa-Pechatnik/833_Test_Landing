@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,14 +47,14 @@
                   </svg>
                   <p class="phone_online">0 (800) 33-20-29</p>
                 </a>
-                <p class="phone_line">&#124</p>
+                <p class="phone_line">&#124;</p>
               </li>
               <li class="schedule_info">
                 <p>Працюємо 7 днів на тиждень</p>
-                <p class="phone_line">&#124</p>
+                <p class="phone_line">&#124;</p>
               </li>
               <li>
-                <time>9:00 — 18:00</time>
+                <time datetime="P365D">9:00 — 18:00</time>
               </li>
             </ul>
             <div class="registration">
@@ -92,6 +92,18 @@
                 </li>
                 <li class="nav_item">
                   <a class="nav_item__link" href="#">налаштування</a>
+                </li>
+              </ul>
+
+              <ul class="mob_items" data-user="close">
+                <li class="mob_item">
+                  <a class="mob_item__link nav_aktiv" href="#">сподобалось</a>
+                </li>
+                <li class="mob_item">
+                  <a class="mob_item__link" href="#">Особистий кабінет</a>
+                </li>
+                <li class="mob_item">
+                  <a class="mob_item__link" href="#">налаштування</a>
                 </li>
               </ul>
 
@@ -528,12 +540,12 @@
             <section class="company-category">
               <h3>Категорії</h3>
               <ul class="category_items">
-                <li><a class="category__link" href="http://">годинники</a></li>
-                <li><a class="category__link" href="http://">запонки</a></li>
-                <li><a class="category__link" href="http://">ремені</a></li>
-                <li><a class="category__link" href="http://">ювелірні вироби</a></li>
-                <li><a class="category__link" href="http://">на замовлення</a></li>
-                <li><a class="category__link" href="http://">браслети</a></li>
+                <li><a class="category__link" href="#">годинники</a></li>
+                <li><a class="category__link" href="#">запонки</a></li>
+                <li><a class="category__link" href="#">ремені</a></li>
+                <li><a class="category__link" href="#">ювелірні вироби</a></li>
+                <li><a class="category__link" href="#">на замовлення</a></li>
+                <li><a class="category__link" href="#">браслети</a></li>
               </ul>
             </section>
 
@@ -543,10 +555,10 @@
                 Компанія пропонує тільки оригінальну продукцію від найвідоміших світових брендів за найкращою ціною.
                 Ми дбаємо про комфорт наших покупців і постійно розширюємо можливості сервісного обслуговування.
               </p >
-              <form class="company-form" action="" method="post">
+              <form class="company-form" name="form-email" action="#" method="post">
                 <ul class="form-email">
                   <li class="email">
-                    <input type="email" name="" id="" placeholder="Ваша пошта" minlength="6" required >
+                    <input type="email" name="email" id="email" placeholder="Ваша пошта" minlength="6" required >
                   </li>
                   <li><button type="submit">ПІДПИСАТИСЯ</button></li>
                 </ul>
@@ -561,5 +573,6 @@
           </div>
         </footer>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

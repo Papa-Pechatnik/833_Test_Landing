@@ -1,13 +1,16 @@
-let btn = document.querySelector(".mob_items");
+let burger = document.querySelector(".burger");
+console.log(burger.getAttribute("data-user"));
+
+let btn = document.querySelector(".nav_mob");
 btn.addEventListener( "click", function () {
-    const Attribute = btn.getAttribute("data-user");
+    const Attribute = burger.getAttribute("data-user");
         if (Attribute === "close")
             { 
-                btn.removeAttribute("data-user");
-                btn.setAttribute("data-user", "open");
+                burger.removeAttribute("data-user");
+                burger.setAttribute("data-user", "open");
             } else {
-                     btn.removeAttribute("data-user");
-                     btn.setAttribute("data-user", "close");
+                burger.removeAttribute("data-user");
+                burger.setAttribute("data-user", "close");
                     }
     
 });

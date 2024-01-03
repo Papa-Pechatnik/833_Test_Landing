@@ -5,6 +5,7 @@
 4. HEADER
     4.1 header
     4.2 nav
+    4.2 burger
     4.3 slider
 5. MAIN
     5.0 - Загальні класи продукту
@@ -141,7 +142,7 @@ h5 {
 .header-fix {
   width: 100vw;
   position: fixed;
-  top:0;
+  top: 0;
   height: max-content;
   z-index: 10;
 }
@@ -235,6 +236,10 @@ h5 {
 }
 
 /* ---------- 4.2 nav ---------- */
+menu {
+  position: relative;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -263,6 +268,38 @@ h5 {
   text-wrap: nowrap;
   text-transform: uppercase;
   padding: 31px 16px; /* 31px 16px; */
+}
+
+/* ---------- 4.2 burger ---------- */
+.nav_mob {
+  display: none;
+  margin-left: 36px;
+  margin-right: 36px;
+}
+
+.burger[data-user="close"] {
+display: none;
+}
+
+.burger[data-user="open"] {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  right: 0; /*-200px*/
+  top: 100%;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%);
+  & .nav_item {
+    width: inherit;
+  }
+  }
+
+
+.burger[data-user="open"] .nav_item__link {
+  width: inherit;
+  padding: 20px 20px; /* 31px 16px; */
 }
 
 .ham {
@@ -314,54 +351,6 @@ h5 {
   fill: var(--color-white, #ffffff);
 }
 
-/* БУРГЕР -------------------------------------------*/
-.nav_mob {
-  display: none;
-  margin-left: 36px;
-  margin-right: 36px;
-}
-
-.nav_mob:active {
-  border: 2px solid red;
-}
-
-.mob_items {
-  width: 30px;
-  height: 18px;
-  border:none;
-  display: none;
-  background-color: transparent;
-
-}
-
-
-/* 
-
-.burger[data-user="open"] ul {
-  display: inline-block;
-
-  position: relative;
-  margin-top: 40px;
-  margin-left: -37px;
-  text-align: right;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.burger[data-user="open"] ul li a{
-  display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #21243D;
-}
-
-.burger[data-user="close"] ul{
-  display: inline-block;
-}
-
-nav ul {
-  display: none;
-} */
-
 /* ---------- 4.3 slider ---------- */
 .off {
   display: none;
@@ -374,33 +363,29 @@ nav ul {
   position: relative;
   width: 100%;
   height: 86.75vh;
-  /* height: 75vh; */
-  /* padding-top: 122px; */
   min-height: 46.875rem; /* 750px*/
   overflow: hidden;
 }
 
 .slider_background {
   width: 100%;
-  background-image: 
-  linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
-  image-set(
-    url("../Img/slide/slide_1_big.avif") type("image/avif") 2x,
-    url("../Img/slide/slide_1_sm.avif") type("image/avif") 1x,
-    url("../Img/slide/slide_1_big.webp") type("image/webp") 2x,
-    url("../Img/slide/slide_1_sm.webp") type("image/webp") 1x,
-    url("../Img/slide/slide_1_big.jpg") 2x,
-    url("../Img/slide/slide_1_sm.jpg") 1x
-  );
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+    image-set(
+      url("../Img/slide/slide_1_big.avif") type("image/avif") 2x,
+      url("../Img/slide/slide_1_sm.avif") type("image/avif") 1x,
+      url("../Img/slide/slide_1_big.webp") type("image/webp") 2x,
+      url("../Img/slide/slide_1_sm.webp") type("image/webp") 1x,
+      url("../Img/slide/slide_1_big.jpg") 2x,
+      url("../Img/slide/slide_1_sm.jpg") 1x
+    );
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-
 .slider-titel {
   position: absolute;
-  top: calc(50% + var(--fixed)/2);
+  top: calc(50% + var(--fixed) / 2);
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -551,16 +536,15 @@ nav ul {
 }
 
 .collection_background {
-  background-image: 
-  linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
-  image-set(
-    url("../Img/collection/new_collection_big.avif") type("image/avif") 2x,
-    url("../Img/collection/new_collection_sm.avif") type("image/avif") 1x,
-    url("../Img/collection/new_collection_big.webp") type("image/webp") 2x,
-    url("../Img/collection/new_collection_sm.webp") type("image/webp") 1x,
-    url("../Img/collection/new_collection_big.jpg") 2x,
-    url("../Img/collection/new_collection_sm.jpg") 1x
-  );
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+    image-set(
+      url("../Img/collection/new_collection_big.avif") type("image/avif") 2x,
+      url("../Img/collection/new_collection_sm.avif") type("image/avif") 1x,
+      url("../Img/collection/new_collection_big.webp") type("image/webp") 2x,
+      url("../Img/collection/new_collection_sm.webp") type("image/webp") 1x,
+      url("../Img/collection/new_collection_big.jpg") 2x,
+      url("../Img/collection/new_collection_sm.jpg") 1x
+    );
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
@@ -590,9 +574,8 @@ nav ul {
   height: 55.56vw;
   min-height: 375px;
   aspect-ratio: 1/1;
-    background-image: 
-    linear-gradient(0deg, rgba(15, 15, 15, 0.50) 0%, rgba(15, 15, 15, 0.50) 100%),
-      image-set(
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+    image-set(
       url("../Img/collection/old_collection_big.avif") type("image/avif") 2x,
       url("../Img/collection/old_collection_sm.avif") type("image/avif") 1x,
       url("../Img/collection/old_collection_big.webp") type("image/webp") 2x,
@@ -600,9 +583,9 @@ nav ul {
       url("../Img/collection/old_collection_big.jpg") 2x,
       url("../Img/collection/old_collection_sm.jpg") 1x
     );
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .old_box {
   flex: 0 1 51.25%;
@@ -618,8 +601,8 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-    margin-left: clamp(0rem, -21rem + 35vw, 7.875rem);
-    margin-right: clamp(0rem, -28.3332rem + 47.222vw, 10.625rem);
+  margin-left: clamp(0rem, -21rem + 35vw, 7.875rem);
+  margin-right: clamp(0rem, -28.3332rem + 47.222vw, 10.625rem);
   & .header-box_line {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -997,18 +980,18 @@ nav ul {
     display: flex;
     flex-wrap: wrap-reverse;
   }
-  
+
   .old_box {
-width: 100vw;
+    width: 100vw;
   }
-  
+
   .old_item {
     width: inherit;
     min-width: 100%;
-      margin-left: 0;
-      margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
-  
+
   .new_season {
     display: flex;
     flex-direction: column;
@@ -1046,7 +1029,7 @@ width: 100vw;
   }
 }
 
-@media screen and (max-width: 719.98px), (max-height: 563.98px){
+@media screen and (max-width: 719.98px), (max-height: 563.98px) {
   .nav_mob {
     display: block;
   }

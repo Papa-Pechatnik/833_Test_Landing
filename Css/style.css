@@ -140,7 +140,7 @@ h5 {
 
 /* ---------- 4.1 header ---------- */
 .header-fix {
-  width: 100vw;
+  width: 100%;
   position: fixed;
   top: 0;
   height: max-content;
@@ -237,7 +237,7 @@ h5 {
 
 /* ---------- 4.2 nav ---------- */
 .menu {
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 

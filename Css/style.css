@@ -236,7 +236,8 @@ h5 {
 }
 
 /* ---------- 4.2 nav ---------- */
-menu {
+.menu {
+  width: 100vw;
   position: relative;
 }
 

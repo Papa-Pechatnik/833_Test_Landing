@@ -712,6 +712,9 @@ background-size: cover;
   justify-content: center;
   gap: 40px 23px;
   width: 100%;
+  & .product_item:nth-last-of-type(1) {
+    height: 325px;
+  }
 }
 
 .product_item_end {

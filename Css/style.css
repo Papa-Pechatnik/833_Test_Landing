@@ -37,6 +37,7 @@ a {
 }
 
 body {
+  width: 100vw;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;

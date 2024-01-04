@@ -29,6 +29,8 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./Img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -95,7 +97,7 @@
                 </li>
               </ul>
 
-              <ul class="burger" aria-label="menu burger" data-user="close">
+              <ul class="burger background-black" aria-label="menu burger" data-user="close">
                 <li class="nav_item">
                   <a class="nav_item__link nav_aktiv" href="#">сподобалось</a>
                 </li>
@@ -128,7 +130,41 @@
       
       <!-- slider -->
       <h1 class="off">PORTEN, Інтернет-магазин годинників</h1>
-      <div class="slider slider_background">
+      <div class="slider"> <!-- <div class="slider slider_background"> -->
+
+              <!-- Slider main container -->
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img src="./Img/slide/slide_1_big.jpg" alt="slide1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./Img/slide/slide_2_big.jpg" alt="slide2">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./Img/slide/slide_3_big.jpg" alt="slide3">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./Img/slide/slide_4_big.jpg" alt="slide4">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./Img/slide/slide_5_big.jpg" alt="slide5">
+                  </div>
+                  ...
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+
         <div class="slider-titel">
           <div class="logo-box">
             <img class="logo-img" src="./Img/logo/PORTEN.svg" alt="logo PORTEN">
@@ -572,6 +608,7 @@
           </div>
         </footer>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>

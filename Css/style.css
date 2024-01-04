@@ -144,7 +144,7 @@ h5 {
   position: fixed;
   top: 0;
   height: max-content;
-  z-index: 10;
+  z-index: 3;
 }
 
 .header,
@@ -366,15 +366,83 @@ display: none;
 }
 
 .swiper {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   --swiper-navigation-color: var(--color-white, #FFFFFF);;
 }
 
-.swiper img {
+/* .swiper img {
   object-fit: cover;
   width: inherit;
   height: inherit;
+} */
+
+.swiper-slide {
+  width: inherit;
+  /* height: inherit; */
+  background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.slide1 {
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+  image-set(
+    url("../Img/slide/slide_1_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_1_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_1_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_1_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_1_big.jpg") 2x,
+    url("../Img/slide/slide_1_sm.jpg") 1x
+  );
+}
+
+.slide2 {
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+  image-set(
+    url("../Img/slide/slide_2_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_2_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_2_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_2_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_2_big.jpg") 2x,
+    url("../Img/slide/slide_2_sm.jpg") 1x
+  );
+}
+
+.slide3 {
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+  image-set(
+    url("../Img/slide/slide_3_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_3_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_3_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_3_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_3_big.jpg") 2x,
+    url("../Img/slide/slide_3_sm.jpg") 1x
+  );
+}
+
+.slide4 {
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+  image-set(
+    url("../Img/slide/slide_4_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_4_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_4_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_4_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_4_big.jpg") 2x,
+    url("../Img/slide/slide_4_sm.jpg") 1x
+  );
+}
+
+.slide5 {
+  background-image: linear-gradient(0deg, rgba(15, 15, 15, 0.5) 0%, rgba(15, 15, 15, 0.5) 100%),
+  image-set(
+    url("../Img/slide/slide_5_big.avif") type("image/avif") 2x,
+    url("../Img/slide/slide_5_sm.avif") type("image/avif") 1x,
+    url("../Img/slide/slide_5_big.webp") type("image/webp") 2x,
+    url("../Img/slide/slide_5_sm.webp") type("image/webp") 1x,
+    url("../Img/slide/slide_5_big.jpg") 2x,
+    url("../Img/slide/slide_5_sm.jpg") 1x
+  );
 }
 
 /* .slider_background {
@@ -1078,3 +1146,4 @@ display: none;
     font-size: 1rem;
   }
 }
+

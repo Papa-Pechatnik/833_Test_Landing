@@ -37,6 +37,7 @@ a {
 }
 
 body {
+  /* width: 100vw; */
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -142,7 +143,7 @@ h5 {
 
 /* ---------- 4.1 header ---------- */
 .header-fix {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   height: max-content;
@@ -239,7 +240,7 @@ h5 {
 
 /* ---------- 4.2 nav ---------- */
 .menu {
-  width: 100%;
+  width: 100vw;
   position: relative;
 }
 
@@ -366,20 +367,18 @@ display: none;
   width: 100%;
   height: 86.75vh;
   min-height: 46.875rem; /* 750px*/
-  
 }
 
 .swiper {
   overflow: hidden;
   width: inherit;
   height: 100%;
-  --swiper-navigation-color: var(--color-white, #FFFFFF);;
 }
 
 
 .swiper-slide {
   width: inherit;
-  /* height: inherit; */
+  height: inherit;
   background-position: center;
 background-repeat: no-repeat;
 background-size: cover;

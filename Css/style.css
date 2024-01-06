@@ -1173,5 +1173,15 @@ background-size: cover;
       width: clamp(10rem, 2.7272rem + 36.364vh, 11.25rem);
     }
 }
+
+.old_background,
+.collection_background,
+.picture_img1,
+.picture_img2,
+.picture_img3,
+.picture_img4 {
+  height: 90vh;
+  min-height: 320px;
+}
 }
 
